@@ -1,7 +1,9 @@
 package com.ligabetplay.ligabetplay.equipo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface EquipoRepository extends JpaRepository<Equipo, Integer> {
+@Repository
+public interface EquipoRepository extends JpaRepository<Equipo, Integer>, EquipoRepositoryPort {
 
 }
