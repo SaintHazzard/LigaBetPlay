@@ -1,5 +1,7 @@
 package com.ligabetplay.ligabetplay.partido;
 
+import com.ligabetplay.ligabetplay.equipo.Equipo;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,10 +10,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PartidoDTO {
-  private int idEquipoLocal;
-  private int idEquipoVisitante;
+  private Equipo equipoLocal;
+  private Equipo equipoVisitante;
   private int golesLocal;
   private int golesVisitante;
   private String fechaPartido;
-
 }

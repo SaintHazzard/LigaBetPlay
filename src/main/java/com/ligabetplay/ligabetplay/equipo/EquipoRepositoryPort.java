@@ -2,6 +2,8 @@ package com.ligabetplay.ligabetplay.equipo;
 
 import java.util.Optional;
 
+import java.util.ArrayList;
+
 public interface EquipoRepositoryPort {
   Equipo save(Equipo equipo);
 
@@ -11,6 +13,8 @@ public interface EquipoRepositoryPort {
 
   Equipo findByNombre(String nombre);
 
-  Iterable<Equipo> findAll();
+  ArrayList<Equipo> findAll();
+
+  boolean existsByNombre(String nombre);
 
 }

@@ -1,5 +1,6 @@
 package com.ligabetplay.ligabetplay.equipo;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,7 +16,8 @@ import lombok.NoArgsConstructor;
 public class Equipo {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private int id;
+  private Long id;
+  @Column(unique = true)
   private String nombre;
   private int partidosJugados;
   private int partidosGanados;

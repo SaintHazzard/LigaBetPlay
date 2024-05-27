@@ -2,6 +2,7 @@ package com.ligabetplay.ligabetplay.equipo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import java.util.ArrayList;
 
 @Service
 public class EquipoService {
@@ -25,12 +26,16 @@ public class EquipoService {
     return equipoRepositoryPort.save(equipo);
   }
 
-  public Iterable<Equipo> getAllEquipos() {
+  public ArrayList<Equipo> getAllEquipos() {
     return equipoRepositoryPort.findAll();
   }
 
   public Equipo getEquipoByNombre(String nombre) {
     return equipoRepositoryPort.findByNombre(nombre);
+  }
+
+  public boolean verificarEquipo(String nombre) {
+    return equipoRepositoryPort.existsByNombre(nombre);
   }
 
 }
