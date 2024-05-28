@@ -3,6 +3,7 @@ package com.ligabetplay.ligabetplay.equipo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
+import java.util.Optional;
 
 @Service
 public class EquipoService {
@@ -36,6 +37,26 @@ public class EquipoService {
 
   public boolean verificarEquipo(String nombre) {
     return equipoRepositoryPort.existsByNombre(nombre);
+  }
+
+  public Optional<Equipo> getEquipoConMasPuntos() {
+    return equipoRepositoryPort.findTopByOrderByTotalPuntosDesc();
+  }
+
+  public Optional<Equipo> getEquipoConMasGoles() {
+    return equipoRepositoryPort.findTopByOrderByGolesFavorDesc();
+  }
+
+  public Optional<Equipo> getEquipoConMasPartidosGanados() {
+    return equipoRepositoryPort.findTopByOrderByPartidosGanadosDesc();
+  }
+
+  public int getTotalGoles() {
+    return equipoRepositoryPort.findAll().stream().mapToInt(Equipo::getGolesFavor).sum();
+  }
+
+  public double getPromedioGoles() {
+    return equipoRepositoryPort.findAll().stream().mapToInt(Equipo::getGolesFavor).average().orElse(0);
   }
 
 }

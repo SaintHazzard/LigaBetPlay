@@ -17,4 +17,10 @@ public interface EquipoRepositoryPort {
 
   boolean existsByNombre(String nombre);
 
+  Optional<Equipo> findTopByOrderByGolesFavorDesc();
+
+  Optional<Equipo> findTopByOrderByTotalPuntosDesc();
+
+  Optional<Equipo> findTopByOrderByPartidosGanadosDesc();
+
 }
