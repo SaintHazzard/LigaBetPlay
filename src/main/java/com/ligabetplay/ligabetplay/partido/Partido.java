@@ -33,13 +33,4 @@ public class Partido {
   private int golesVisitante;
   private boolean jugado;
 
-  public Partido(LocalDate fechaPartido, Equipo equipoLocal, Equipo equipoVisitante) {
-    this.fechaPartido = fechaPartido;
-    this.equipoLocal = equipoLocal;
-    this.equipoVisitante = equipoVisitante;
-    this.golesLocal = 0;
-    this.golesVisitante = 0;
-    this.jugado = false;
-  }
-
 }

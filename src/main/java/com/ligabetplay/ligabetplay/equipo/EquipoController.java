@@ -5,6 +5,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.ligabetplay.ligabetplay.funciones.QuickSort;
+import com.ligabetplay.ligabetplay.partido.PartidoDTO;
+
 import jakarta.servlet.http.HttpServletRequest;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,9 +25,10 @@ public class EquipoController {
   @GetMapping("/")
   public String index(Model model) {
     model.addAttribute("equipo", new Equipo());
-
     ArrayList<Equipo> equipos = equipoService.getAllEquipos();
+    QuickSort.quickSort(equipos, 0, equipos.size() - 1);
     model.addAttribute("equipos", equipos);
+    model.addAttribute("partidoDTO", new PartidoDTO());
     return "index";
   }
 

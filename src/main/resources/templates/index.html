@@ -68,14 +68,24 @@
     </div>
     <div class="container">
       <h2>Registrar Enfrentamiento</h2>
-      <form action="/submit-match" method="post">
+      <form
+        action="#"
+        th:action="@{/partido/registrarpartido}"
+        th:object="${partidoDTO}"
+        method="post"
+      >
         <div class="form-group">
           <label for="match-date">Fecha del Partido:</label>
-          <input type="date" id="match-date" name="match-date" required />
+          <input type="date" th:field="*{fechaPartido}" required />
         </div>
         <div class="form-group">
           <label for="home-team">Equipo Local:</label>
-          <select id="home-team" name="home-team" required>
+          <select
+            id="home-team"
+            name="home-team"
+            th:field="*{equipoLocal}"
+            required
+          >
             <option value="">Seleccione un equipo</option>
             <option
               th:each="equipo : ${equipos}"
@@ -89,12 +99,18 @@
             id="home-score"
             name="home-score"
             min="0"
+            th:field="*{golesLocal}"
             required
           />
         </div>
         <div class="form-group">
           <label for="away-team">Equipo Visitante:</label>
-          <select id="away-team" name="away-team" required>
+          <select
+            id="away-team"
+            name="away-team"
+            required
+            th:field="*{equipoVisitante}"
+          >
             <option value="">Seleccione un equipo</option>
             <option
               th:each="equipo : ${equipos}"
@@ -108,6 +124,7 @@
             id="away-score"
             name="away-score"
             min="0"
+            th:field="*{golesVisitante}"
             required
           />
         </div>

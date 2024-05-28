@@ -45,14 +45,19 @@ public class Equipo {
   }
 
   public void sumarPartidoGanado() {
+    sumarPartidoJugado();
     this.partidosGanados++;
+    this.totalPuntos += 3;
   }
 
   public void sumarPartidoEmpatado() {
+    sumarPartidoJugado();
     this.partidosEmpatados++;
+    this.totalPuntos++;
   }
 
   public void sumarPartidoPerdido() {
+    sumarPartidoJugado();
     this.partidosPerdidos++;
   }
 
@@ -66,10 +71,6 @@ public class Equipo {
 
   public void sumarDiferenciaGoles(int goles) {
     this.diferenciaGoles += goles;
-  }
-
-  public void sumarPuntos(int puntos) {
-    this.totalPuntos += puntos;
   }
 
   public void resetear() {
