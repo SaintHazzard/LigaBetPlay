@@ -1,6 +1,5 @@
 package com.ligabetplay.ligabetplay.equipo;
 
-import org.hibernate.mapping.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -43,7 +42,7 @@ public class EquipoController {
     model.addAttribute("equipo", new Equipo());
     model.addAttribute("equipos", equipos);
     model.addAttribute("partidoDTO", new PartidoDTO());
-    return "index";
+    return "indexhtmlhtml";
   }
 
   @PostMapping("/guardarequipo")

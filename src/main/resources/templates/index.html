@@ -56,7 +56,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr th:each="equipo, iterStat : ${equipos}">
+              <tr th:each="equipo, iterStat : ${equipos}">
               <td th:text="${iterStat.count}"></td>
               <td th:text="${equipo.nombre}"></td>
               <td th:text="${equipo.partidosJugados}"></td>
