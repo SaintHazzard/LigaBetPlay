@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/LIGABETPLAY
+    url: jdbc:postgresql://dbliga:5432/LIGABETPLAY
     username: hazzard
     password: 1324
   jpa:

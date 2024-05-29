@@ -42,7 +42,7 @@ public class EquipoController {
     model.addAttribute("equipo", new Equipo());
     model.addAttribute("equipos", equipos);
     model.addAttribute("partidoDTO", new PartidoDTO());
-    return "indexhtmlhtml";
+    return "index";
   }
 
   @PostMapping("/guardarequipo")
