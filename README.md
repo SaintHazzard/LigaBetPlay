@@ -10,6 +10,7 @@
 ## Configuración
 
 1. Clona el repositorio:
+
   `git clone https://github.com/SaintHazzard/LigaBetPlay`
   `cd LigaBetPlay`
 
@@ -18,7 +19,9 @@
   `chmod +x init-scripts/init.sh`
 
 3. Levanta la base de datos con Docker Compose:
+
   `docker-compose up`
 
 4. Ejecutar la aplicacion
+
   `./mvnw spring-boot:run`
