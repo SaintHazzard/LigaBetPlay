@@ -6,7 +6,7 @@ services:
       POSTGRES_USER: hazzard
       POSTGRES_PASSWORD: 1324
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - ./db-data:/var/lib/postgresql/data
-      - ./init-scripts:/docker-entrypoint-initdb.d
+      # - ./init-scripts:/docker-entrypoint-initdb.d

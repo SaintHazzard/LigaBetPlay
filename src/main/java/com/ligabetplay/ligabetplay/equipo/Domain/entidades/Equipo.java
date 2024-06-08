@@ -1,4 +1,4 @@
-package com.ligabetplay.ligabetplay.equipo;
+package com.ligabetplay.ligabetplay.equipo.Domain.entidades;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

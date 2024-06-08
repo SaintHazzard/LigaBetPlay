@@ -10,7 +10,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import java.time.LocalDate;
 
-import com.ligabetplay.ligabetplay.equipo.Equipo;
+import com.ligabetplay.ligabetplay.equipo.Domain.entidades.Equipo;
 
 @Entity
 @Data

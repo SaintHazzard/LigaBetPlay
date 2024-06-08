@@ -15,6 +15,6 @@ function generateReport(type) {
       });
     })
     .catch(error => {
-      console.error('There was a problem with the fetch operation:', error);
+      console.error('Hay problemas en el fetch:', error);
     });
 }

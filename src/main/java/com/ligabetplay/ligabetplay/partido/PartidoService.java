@@ -3,7 +3,7 @@ package com.ligabetplay.ligabetplay.partido;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.ligabetplay.ligabetplay.equipo.Equipo;
+import com.ligabetplay.ligabetplay.equipo.Domain.entidades.Equipo;
 
 import java.util.ArrayList;
 import java.time.LocalDate;

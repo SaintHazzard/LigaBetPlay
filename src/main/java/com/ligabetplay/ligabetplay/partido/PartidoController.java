@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import com.ligabetplay.ligabetplay.equipo.Equipo;
+import com.ligabetplay.ligabetplay.equipo.Domain.entidades.Equipo;
 
 @Controller
 @RequestMapping("/partido")

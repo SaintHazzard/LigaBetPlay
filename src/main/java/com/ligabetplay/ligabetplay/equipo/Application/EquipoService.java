@@ -1,7 +1,11 @@
-package com.ligabetplay.ligabetplay.equipo;
+package com.ligabetplay.ligabetplay.equipo.Application;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.ligabetplay.ligabetplay.equipo.Domain.entidades.Equipo;
+import com.ligabetplay.ligabetplay.equipo.Infraestructure.EquipoRepositoryPort;
+
 import java.util.ArrayList;
 import java.util.Optional;
 

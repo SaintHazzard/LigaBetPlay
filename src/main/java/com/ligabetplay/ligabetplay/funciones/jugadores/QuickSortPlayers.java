@@ -1,9 +1,10 @@
-package com.ligabetplay.ligabetplay.funciones;
+package com.ligabetplay.ligabetplay.funciones.jugadores;
 
 import java.util.ArrayList;
-import com.ligabetplay.ligabetplay.equipo.Equipo;
 
-public class QuickSort {
+import com.ligabetplay.ligabetplay.equipo.Domain.entidades.Equipo;
+
+public class QuickSortPlayers {
   public static void quickSort(ArrayList<Equipo> equipos, int low, int high) {
     if (low < high) {
       int pi = particion(equipos, low, high);

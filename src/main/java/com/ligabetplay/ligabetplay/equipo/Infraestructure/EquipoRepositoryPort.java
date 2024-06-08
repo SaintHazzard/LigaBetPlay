@@ -1,6 +1,8 @@
-package com.ligabetplay.ligabetplay.equipo;
+package com.ligabetplay.ligabetplay.equipo.Infraestructure;
 
 import java.util.Optional;
+
+import com.ligabetplay.ligabetplay.equipo.Domain.entidades.Equipo;
 
 import java.util.ArrayList;
 

@@ -5,8 +5,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.ligabetplay.ligabetplay.equipo.Equipo;
-import com.ligabetplay.ligabetplay.equipo.EquipoService;
+import com.ligabetplay.ligabetplay.equipo.Application.EquipoService;
+import com.ligabetplay.ligabetplay.equipo.Domain.entidades.Equipo;
 
 @Service
 public class ReportService {
@@ -35,7 +35,6 @@ public class ReportService {
     Optional<Equipo> equipoOptional = equipoService.getEquipoConMasGoles();
     if (equipoOptional.isPresent()) {
       Equipo equipo = equipoOptional.get();
-
       Reporte reporte = new Reporte();
       reporte.setTitulo("Equipo con más goles");
       reporte.setContenido(

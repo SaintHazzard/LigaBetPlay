@@ -1,4 +1,4 @@
-package com.ligabetplay.ligabetplay.equipo;
+package com.ligabetplay.ligabetplay.equipo.Infraestructure;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.ligabetplay.ligabetplay.funciones.QuickSort;
+import com.ligabetplay.ligabetplay.equipo.Application.EquipoService;
+import com.ligabetplay.ligabetplay.equipo.Domain.entidades.Equipo;
+import com.ligabetplay.ligabetplay.funciones.equipo.QuickSort;
 import com.ligabetplay.ligabetplay.partido.PartidoDTO;
 import com.ligabetplay.ligabetplay.reportes.ReportService;
 import com.ligabetplay.ligabetplay.reportes.Reporte;
@@ -63,5 +65,4 @@ public class EquipoController {
   public Reporte generateReport(@RequestParam("type") String type) {
     return reportService.generateReport(type);
   }
-
 }

@@ -56,17 +56,17 @@
             </tr>
           </thead>
           <tbody>
-              <tr th:each="equipo, iterStat : ${equipos}">
+            <tr th:each="x, iterStat : ${equipos}">
               <td th:text="${iterStat.count}"></td>
-              <td th:text="${equipo.nombre}"></td>
-              <td th:text="${equipo.partidosJugados}"></td>
-              <td th:text="${equipo.partidosGanados}"></td>
-              <td th:text="${equipo.partidosEmpatados}"></td>
-              <td th:text="${equipo.partidosPerdidos}"></td>
-              <td th:text="${equipo.golesFavor}"></td>
-              <td th:text="${equipo.golesContra}"></td>
-              <td th:text="${equipo.diferenciaGoles}"></td>
-              <td th:text="${equipo.totalPuntos}"></td>
+              <td th:text="${x.nombre}"></td>
+              <td th:text="${x.partidosJugados}"></td>
+              <td th:text="${x.partidosGanados}"></td>
+              <td th:text="${x.partidosEmpatados}"></td>
+              <td th:text="${x.partidosPerdidos}"></td>
+              <td th:text="${x.golesFavor}"></td>
+              <td th:text="${x.golesContra}"></td>
+              <td th:text="${x.diferenciaGoles}"></td>
+              <td th:text="${x.totalPuntos}"></td>
             </tr>
           </tbody>
         </table>
